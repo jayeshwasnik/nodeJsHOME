@@ -49,11 +49,11 @@ else{console.log("db connection open succesful")
 
 //bootstrap model
 let modelsPath='./routes';
-let routeFinder=fs.readdirSync(modelsPath).forEach((file)=>{
+let modelFinder=fs.readdirSync(modelsPath).forEach((file)=>{
 if(~file.indexOf('.js')){
     console.log("including the models from the following files")
     console.log(routesPath + '/' + file)
-    equire(routesPath+'/'+file);
+    require(routesPath+'/'+file);
 
 
 

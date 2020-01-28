@@ -7,8 +7,12 @@ let setRouter=(app) =>{
 
     
 
-   app.get('/hello',blogController.helloWorldFunct);
-   app.get('/example',blogController.exampleFunct); 
+//    app.get('/hello',blogController.helloWorldFunct);
+//    app.get('/example',blogController.exampleFunct); 
+
+
+app.get('/route/:param1/:param2',blogController.routeParamFunction);
+app.get('/test/query',blogController.queryParamFunction); 
 
 }
 
